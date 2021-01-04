@@ -10,7 +10,7 @@ Chrome Extension to hide feeds that contain **specific keywords** on [Facebook](
 </div>
 
 - Autofocus to input when popup opens
-- Search for feeds on page scoll
+- Searches for new feeds on every page scoll
 
 ## 🚀 On action
 
