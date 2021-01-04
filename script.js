@@ -28,13 +28,13 @@ const onClickAddKeyword = async () => {
   const value = NewKeywordInput.value;
 
   if (!value) {
-    window.alert('추가할 키워드를 입력해 주세요!');
+    window.alert('Please enter a keyword to register!');
     return;
   }
 
   const keywords = await getCurrentKeywords();
   if (keywords.includes(value)) {
-    window.alert('이미 등록된 키워드입니다!');
+    window.alert('That keyword is already registered!');
     return;
   }
 
@@ -52,7 +52,7 @@ const onClickRemove = async (ButtonElement) => {
   chrome.storage.local.set(
     { keywords: keywords.filter((value) => value !== currentKeyword) },
     () => {
-      window.alert(`키워드 '${currentKeyword}'를 삭제했습니다!`);
+      window.alert(`Successfully removed keyword '${currentKeyword}'!`);
       loadKeywords();
     },
   );
