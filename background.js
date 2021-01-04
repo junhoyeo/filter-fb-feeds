@@ -1,10 +1,18 @@
 console.log('FACEBOOK FEEDS ARE FILTERED');
-const filteredWords = ['루다', '코로나', '코다리', '콩진호', 'ai', '개발자님'];
 
-addEventListener('scroll', () => {
+const getCurrentKeywords = () =>
+  new Promise((resolve) => {
+    chrome.storage.local.get(['keywords'], function (result) {
+      resolve(result['keywords'] || []);
+    });
+  });
+
+addEventListener('scroll', async () => {
   feed = [...document.querySelectorAll('[role="feed"] > div')];
+  filteredWords = await getCurrentKeywords();
+  console.log(filteredWords);
 
-  feed.map((v) => {
+  feed.forEach((v) => {
     const text = v.innerText;
     const isFiltered = filteredWords.some((word) => text.includes(word));
     if (isFiltered) {

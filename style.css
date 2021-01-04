@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  padding: 16px;
+  padding-bottom: 22px;
+  width: 300px;
+  background-color: #e0e5ec;
+}
+
+body * {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.35;
+  text-shadow: 5px 5px 9px rgba(163, 177, 198, 0.65), -3px -3px 15px #ffffff;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+h2 {
+  margin: 0;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+ul li:last-child {
+  margin-bottom: 0;
+}
+
+li button {
+  margin-left: 8px;
+}
+
+li input {
+  cursor: not-allowed;
+}
+
+input,
+button {
+  padding: 16px 18px;
+}
+
+input {
+  color: #1b2944;
+  border: none;
+  background: linear-gradient(to top left, #f0f5fd, #caced4);
+  box-shadow: 6px 6px 13px rgb(163, 177, 198, 0.35),
+    -6px -6px 13px rgba(255, 255, 255, 0.8);
+  border-radius: 64px;
+  font-weight: 600;
+  text-shadow: none;
+  transition: 0.2s all ease-in-out;
+  flex: 1;
+}
+
+input:focus {
+  box-shadow: inset 6px 6px 13px #bec3c9, inset -6px -6px 13px #ffffff;
+}
+
+input::placeholder {
+  color: #868e96;
+}
+
+div.create {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  width: 100%;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #e0e5ec;
+  border: 0;
+  box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);
+  color: rgb(27, 41, 68);
+  text-shadow: 2px 2px 3px rgba(193, 204, 224, 0.9);
+  transition: 0.2s all ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 64px;
+}
+
+button:hover,
+button:focus {
+  background: linear-gradient(to top left, #d5dbe0, #f0f5fd);
+  box-shadow: 7px 7px 14px rgb(163, 177, 198, 0.6),
+    -7px -7px 14px rgba(255, 255, 255, 0.5);
+}
+
+div.create button {
+  margin-top: 8px;
+}
+
+button.remove {
+  background-color: #fc4469;
+  text-shadow: 2px 2px 3px rgba(254, 40, 83, 0.9);
+  box-shadow: 4px 4px 22px rgba(254, 40, 83, 0.65),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+button.remove:hover,
+button.remove:focus {
+  background-image: linear-gradient(to right bottom, #fe8d8d, #fe2853);
+  box-shadow: 8px 8px 22px rgba(254, 40, 83, 0.9),
+    -7px -7px 14px rgba(255, 255, 255, 0.5);
+}
